@@ -337,7 +337,7 @@ section:nth-child(odd) {
     #content {
         width: 100%;
         margin-left: 0;
-        padding-top: 78px; /* Space for mobile navbar (56px) + citation banner (22px) */
+        padding-top: 56px;
     }
 
     #sidebar.active {
