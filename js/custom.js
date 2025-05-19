@@ -1,47 +1,48 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sidebar Toggle
-    const sidebarCollapse = document.getElementById('sidebarCollapse');
-    const sidebar = document.getElementById('sidebar');
-    const body = document.body;
+    // Handle navbar links active state
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    if (sidebarCollapse) {
-        sidebarCollapse.addEventListener('click', function(e) {
-            e.stopPropagation();
-            sidebar.classList.toggle('active');
-            body.classList.toggle('sidebar-active');
+    // Set active link based on scroll position
+    function setActiveNavLink() {
+        const scrollPosition = window.scrollY;
+
+        // Get all sections
+        const sections = document.querySelectorAll('section, header');
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100; // Adjust for navbar height
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Add active class to corresponding link
+                const activeLink = document.querySelector(`.navbar-nav .nav-link[href="#${sectionId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
         });
     }
 
-    // Close sidebar when clicking outside on mobile
-    document.addEventListener('click', function(event) {
-        const windowWidth = window.innerWidth;
-        if (windowWidth < 992) {
-            if (!sidebar.contains(event.target) && !sidebarCollapse.contains(event.target) &&
-                sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-                body.classList.remove('sidebar-active');
-            }
-        }
-    });
+    // Initial call to set active link
+    setActiveNavLink();
 
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 992) {
-            // Remove active classes on large screens
-            body.classList.remove('sidebar-active');
-        }
-    });
+    // Set active link on scroll
+    window.addEventListener('scroll', setActiveNavLink);
 
-    // handle sidebar nav links
-    document.querySelectorAll('.sidebar-nav .nav-link').forEach(link => {
-        link.addEventListener('click', function () {
-            if(this.classList.contains('nav-link-external')) {
-                return;
+    // Close navbar collapse on link click on mobile
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
             }
-            document.querySelectorAll('.sidebar-nav .nav-link').forEach(item => {
-                item.classList.remove('active');
-            });
-            this.classList.add('active');
         });
     });
 });

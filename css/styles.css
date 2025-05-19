@@ -3,6 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2C3E50;
     overflow-x: hidden;
+    padding-top: 56px;
 }
 
 section {
@@ -22,89 +23,36 @@ section {
     margin: 0 auto 30px;
 }
 
-/* Sidebar Styles */
-.wrapper {
-    width: 100%;
-    min-height: 100vh;
-}
-
-#sidebar {
-    width: 250px;
-    min-height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px 0;
-    z-index: 999;
-    transition: all 0.3s;
-    background-color: #2C3E50;
-}
-
-.sidebar-header {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #1A5276;
-}
-
-.sidebar-nav {
-    padding: 0 20px;
-}
-
-.sidebar-nav .nav-item {
-    margin-bottom: 10px;
-}
-
-.sidebar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8);
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.sidebar-nav .nav-link:hover,
-.sidebar-nav .nav-link.active {
-    color: #fff;
-    background-color: #1ABC9C;
-}
-
-.sidebar-footer {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Content Area */
-#content {
-    width: calc(100% - 250px);
+.content-wrapper {
+    width: 100%;
     min-height: 100vh;
-    margin-left: 250px;
-    transition: all 0.3s;
     position: relative;
-    padding-top: 0px;
 }
 
-/* Mobile navbar */
-.navbar.d-lg-none {
-    z-index: 1040;
-    background-color: #2C3E50 !important;
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed Navbar */
-.fixed-top-content {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 250px;
-    z-index: 1030;
-    width: calc(100% - 250px);
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s;
 }
 
-@media (max-width: 991px) {
-    .ieee-citation {
-        left: 0;
-        width: 100%;
-        top: 56px; /* Below mobile navbar */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .navbar-expand-lg {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 }
 
@@ -113,40 +61,16 @@ section {
     background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(44, 62, 80, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
     background-size: cover;
     height: auto;
-    padding: 60px 0;
+    padding: 100px 0 60px;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.social-icon {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: white;
-    margin: 0 5px;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background-color: #1ABC9C;
-    color: white;
-    transform: translateY(-3px);
-}
-
-/* Bluesky icon styling */
-.fa-cloud {
-    color: #1ABC9C; /* Updated to match our accent color */
-}
-
 /* About Section */
 .profile-img {
     max-width: 250px;
-    border: 8px solid rgba(26, 188, 156, 0.2); /* Updated to match our accent color */
+    border: 8px solid rgba(26, 188, 156, 0.2);
 }
 
 /* Skills Section */
@@ -155,7 +79,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 3px solid #1ABC9C; /* Added accent color border */
+    border-top: 3px solid #1ABC9C;
 }
 
 .skill-card:hover {
@@ -164,7 +88,7 @@ section {
 }
 
 .skill-icon {
-    color: #8E44AD; /* Updated to our secondary color */
+    color: #8E44AD;
 }
 
 /* Portfolio Section */
@@ -174,7 +98,7 @@ section {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-bottom: 3px solid #8E44AD; /* Added secondary color border */
+    border-bottom: 3px solid #8E44AD;
 }
 
 .portfolio-card:hover {
@@ -199,7 +123,7 @@ section {
 .timeline-item {
     position: relative;
     padding-left: 30px;
-    border-left: 2px solid #8E44AD; /* Updated to secondary color */
+    border-left: 2px solid #8E44AD;
 }
 
 .timeline-item:before {
@@ -210,35 +134,10 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #1ABC9C; /* Updated to accent color */
-}
-
-/* Contact Section */
-.contact-info {
-    background-color: #EBF5FB; /* Light blue-gray background */
-    padding: 30px;
-    border-radius: 10px;
-    height: 100%;
-    border-left: 4px solid #1A5276; /* Left border with primary color */
-}
-
-.contact-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border-right: 4px solid #8E44AD; /* Right border with secondary color */
+    background-color: #1ABC9C;
 }
 
 /* Footer */
-.footer-links a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #1ABC9C !important; /* Updated to accent color */
-}
 
 .footer-bg {
     background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(44, 62, 80, 0.9));
@@ -251,7 +150,7 @@ section {
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: #8E44AD; /* Updated to secondary color */
+    background-color: #8E44AD;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -266,7 +165,7 @@ section {
 .back-to-top:hover {
     opacity: 1;
     color: white;
-    background-color: #1ABC9C; /* Updated to accent color on hover */
+    background-color: #1ABC9C;
     transform: translateY(-3px);
 }
 
@@ -322,70 +221,35 @@ section:nth-child(odd) {
 
 /* Footer Background */
 .bg-dark {
-    background-color: #2C3E50 !important; /* Updated to match sidebar */
+    background-color: #2C3E50 !important;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
-    #sidebar {
-        margin-left: -250px;
-        position: fixed;
-        z-index: 1050;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #content {
-        width: 100%;
-        margin-left: 0;
-        padding-top: 56px;
-    }
-
-    #sidebar.active {
-        margin-left: 0;
-    }
-
-    /* Overlay when sidebar is active on mobile */
-    body.sidebar-active::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1040;
-    }
-
-    .fixed-top-content {
-        left: 0;
-        width: 100%;
-    }
-
     .hero-section {
         height: auto;
         padding: 60px 0;
     }
 
     section {
-        padding: 60px 0;
+        padding: 60px 20px;
     }
 
     .timeline {
         padding-left: 0;
     }
 
-    .contact-info {
-        margin-bottom: 30px;
+    /* Adjust navbar on mobile */
+    .navbar-collapse {
+        background-color: #2C3E50;
+        padding: 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 }
 
-@media (min-width: 992px) {
-    body {
-        padding-top: 0;
-    }
-
-    /* Ensure sidebar is always visible on large screens */
-    #sidebar {
-        margin-left: 0;
-    }
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Account for fixed navbar */
 }

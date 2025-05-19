@@ -13,81 +13,60 @@
 </head>
 
 <body>
-    <div class="wrapper d-flex">
-        <!-- Sidebar -->
-        <nav id="sidebar" class="text-white">
-            <ul class="list-unstyled sidebar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-external" href="https://example.com" target="_blank" rel="noopener noreferrer">
-                        Blog <span style="float: right;"><i class="bi bi-box-arrow-up-right"></i></span>
-                    </a>
-                </li>
-            </ul>
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Viola Goodacre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="sidebar-footer text-center">
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            Blog <i class="bi bi-box-arrow-up-right ms-1"></i>
+                        </a>
+                    </li>
+                </ul>
 
+                <!-- Social Icons -->
+                <div class="d-flex">
+                    <a href="#" class="nav-link text-white"><i class="fab fa-linkedin"></i></a> &nbsp;&nbsp;
+                    <a href="#" class="nav-link text-white"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-        </nav><!-- /#sidebar -->
+        </div>
+    </nav>
 
-        <!-- Page Content -->
-        <div id="content" class="flex-grow-1">
-            <!-- Mobile Navbar with Hamburger -->
-            <nav class="navbar navbar-dark d-lg-none fixed-top">
-                <div class="container-fluid">
-                    <button id="sidebarCollapse" class="navbar-toggler" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Viola Goodacre</a>
-                </div>
-            </nav>
+    <!-- Main Content -->
+    <div class="container-fluid p-0">
+        <div class="content-wrapper">
 
             <!-- Hero Section -->
-            <header id="home" class="hero-section text-white text-center">
+            <header id="home" class="hero-section text-white">
                 <div class="container">
-                    <div class="row text-start">
-
+                    <div class="row">
                         <!-- Left Column: Image -->
                         <div class="col-md-4 text-center mb-4 mb-md-0">
                             <img src="assets/profile.png" alt="Profile Picture"
                                  class="img-fluid rounded-circle profile-img">
                         </div>
-
                         <!-- Right Column: Text -->
                         <div class="col-md-8">
                             <h1 class="display-3">Viola Goodacre</h1>
                             <p class="lead">PhD Student &nbsp;&nbsp; | &nbsp;&nbsp; Graduate Research Assistant</p>
-                            <div class="social-icons mt-4">
-                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </header>
-
 
             <!-- About Section -->
             <section id="about" class="py-5">
@@ -105,8 +84,8 @@
                                 Graduate Research Assistant at the UNC Visual Analysis & Communication Lab. in the
                                 School of Information and Library Science.
                             </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam eu quam finibus interdum. Nulla facilisi. Praesent auctor, nisl vel tincidunt varius, nisi magna sagittis eros, vel aliquam odio felis vel velit. Aliquam erat volutpat.</p>
-                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec lacinia, nunc in aliquam convallis, magna lorem ultricies magna, vel lacinia nulla lorem eu nisi.</p>
+                            <p>Write something about myself -- personal and research interests -- maybe take a look
+                            at my phD and Masters statements of purpose. Also change LinkedIn to match what's here.</p>
                             <div class="mt-4">
                                 <a href="assets/ViolaGoodacreCV.pdf" class="btn btn-primary me-2" target="_blank">
                                     View CV &nbsp;&nbsp; <i class="bi bi-box-arrow-up-right"></i>
@@ -288,19 +267,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <p>&copy; 2025 Viola Goodacre. All Rights Reserved.</p>
-                            <div class="footer-links">
-                                <a href="#home" class="text-white me-3">Home</a>
-                                <a href="#about" class="text-white me-3">About</a>
-                                <a href="#skills" class="text-white me-3">Skills</a>
-                                <a href="#portfolio" class="text-white me-3">Portfolio</a>
-                                <a href="#publications" class="text-white me-3">Publications</a>
-                                <a href="#experience" class="text-white me-3">Experience</a>
-                                <a href="#" class="text-white me-3">Blog</a>
-                            </div>
-                            <div class="social-icons mt-4">
-                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -310,7 +276,7 @@
             <a href="#home" class="back-to-top">
                 <i class="fas fa-arrow-up"></i>
             </a>
-        </div> <!-- /#content -->
+        </div>
     </div>
 </body>
 </html>
