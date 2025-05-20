@@ -115,27 +115,27 @@ section {
 }
 
 /* Experience Section */
-.timeline {
-    position: relative;
-    padding-left: 30px;
-}
+/*.timeline {*/
+/*    position: relative;*/
+/*    padding-left: 30px;*/
+/*}*/
 
-.timeline-item {
-    position: relative;
-    padding-left: 30px;
-    border-left: 2px solid #8E44AD;
-}
+/*.timeline-item {*/
+/*    position: relative;*/
+/*    padding-left: 30px;*/
+/*    border-left: 2px solid #8E44AD;*/
+/*}*/
 
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #1ABC9C;
-}
+/*.timeline-item:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: -10px;*/
+/*    top: 0;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #1ABC9C;*/
+/*}*/
 
 /* Footer */
 
