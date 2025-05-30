@@ -45,4 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // speed up tooltip hover, and hide it slowly
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => {
+        new bootstrap.Tooltip(el, {
+            delay: { show: 50, hide: 100 }
+        });
+    });
 });
+
+
